@@ -1,0 +1,29 @@
+{
+    "name": "ParticipantInstitution",
+    "fields": [
+        {
+            "fieldName": "logo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "study",
+            "otherEntityRelationshipName": "institutions",
+            "relationshipName": "study",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174441",
+    "entityTableName": "participant_institution",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

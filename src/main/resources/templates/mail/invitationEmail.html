@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+    <head>
+        <title th:text="#{email.invitation.title}">Invitation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.invitation.greeting}">
+            Hi,
+        </p>
+        <p th:text="#{email.invitation.text(${study.name})}">
+            A researcher wants to invite you to the  on the iGive2 platform. To join researcher and other study participants please download the iGive2 app and join our community.
+        </p>
+        <p th:text="#{email.invitation.text1}">
+            Once logged in use the code:
+        </p>
+        <p th:text="#{email.invitation.code(${study.code})}">
+
+        </p>
+        <p th:text="#{email.invitation.text2}">
+            Note: Please use this same email address to create your iGive2 account.
+        </p>
+        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.google.android.apps.fitness">Download the App</a>
+        <p th:text="#{email.invitation.text3}">
+            Your iGive2 Team
+        </p>
+        <i><p th:text="#{email.invitation.text4}">
+            The information contained in this e-mail - including attachments and personal data - is intended for the use of the addressee only and is confidential.
+            Access by any other person to this e-mail is not authorised. Any dissemination, distribution, copying or use of this communication without prior permission of the addressee is strictly prohibited.
+            You must take appropriate security and technical measures to protect this information (including personal data) and not retain the information longer than necessary.
+            If you received this e-mail in error, please inform the sender and subsequently delete the e-mail immediately.
+        </p></i>
+        <p>
+            <span th:text="#{email.invitation.text5}">Regards, </span>
+            <br/><br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+    </body>
+</html>

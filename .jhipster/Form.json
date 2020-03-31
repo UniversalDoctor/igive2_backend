@@ -1,0 +1,60 @@
+{
+    "name": "Form",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 500
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "State",
+            "fieldValues": "DRAFT,PUBLISHED,FINISHED"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "formQuestion",
+            "otherEntityRelationshipName": "form",
+            "relationshipName": "questions"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "formAnswers",
+            "otherEntityRelationshipName": "form",
+            "relationshipName": "formAnswers",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "study",
+            "otherEntityRelationshipName": "forms",
+            "relationshipName": "study",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191120120508",
+    "entityTableName": "form",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

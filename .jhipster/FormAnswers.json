@@ -1,0 +1,48 @@
+{
+    "name": "FormAnswers",
+    "fields": [
+        {
+            "fieldName": "savedDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "completed",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "form",
+            "otherEntityRelationshipName": "formAnswers",
+            "relationshipName": "form",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "answer",
+            "otherEntityRelationshipName": "formAnswers",
+            "relationshipName": "responses"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "participant",
+            "otherEntityRelationshipName": "forms",
+            "relationshipName": "participant",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174445",
+    "entityTableName": "form_answers",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

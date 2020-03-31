@@ -1,0 +1,60 @@
+
+{
+    "name": "Participant",
+    "fields": [
+        {
+            "fieldName": "entryDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "anonymousId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "data",
+            "otherEntityRelationshipName": "participant",
+            "relationshipName": "participantData"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "formAnswers",
+            "otherEntityRelationshipName": "participant",
+            "relationshipName": "forms"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mobileUser",
+            "otherEntityRelationshipName": "studies",
+            "relationshipName": "mobileUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "study",
+            "otherEntityName": "study",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name",
+            "otherEntityRelationshipName": "participant"
+        }
+    ],
+    "changelogDate": "20191120120505",
+    "entityTableName": "participant",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

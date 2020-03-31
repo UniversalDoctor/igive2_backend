@@ -1,0 +1,54 @@
+{
+    "name": "Data",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "DataType",
+            "fieldValues": "HEIGHT,WEIGHT,STEPS,ACTIVETIME,SEATEDTIME,SYSTOLIC,DYASTOLIC,BREATHSPERMINUTE,BREATHINGRAWDATA,SLEEP",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "value",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "mobileUser",
+            "otherEntityRelationshipName": "healthData",
+            "relationshipName": "mobileUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "participant",
+            "otherEntityRelationshipName": "participantData",
+            "relationshipName": "participant",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174447",
+    "entityTableName": "data",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

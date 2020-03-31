@@ -1,0 +1,53 @@
+{
+    "name": "FormQuestion",
+    "fields": [
+        {
+            "fieldName": "question",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "isMandatory",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "QuestionType",
+            "fieldValues": "FREEANSWER,FREELONGANSWER,SINGLECHECKBOX,MULTIPLECHECKBOX,DATEANSWER, NUMERICANSWER"
+        },
+        {
+            "fieldName": "options",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "answer",
+            "otherEntityRelationshipName": "formQuestion",
+            "relationshipName": "answer",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "form",
+            "otherEntityRelationshipName": "questions",
+            "relationshipName": "form",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191120120509",
+    "entityTableName": "form_question",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

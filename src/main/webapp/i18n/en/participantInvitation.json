@@ -1,0 +1,25 @@
+{
+  "igive2App": {
+    "participantInvitation": {
+      "home": {
+        "title": "Participant Invitations",
+        "createLabel": "Create a new Participant Invitation",
+        "createOrEditLabel": "Create or edit a Participant Invitation",
+        "notFound": "No Participant Invitations found"
+      },
+      "created": "A new Participant Invitation is created with identifier {{ param }}",
+      "updated": "A Participant Invitation is updated with identifier {{ param }}",
+      "deleted": "A Participant Invitation is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Participant Invitation {{ id }}?"
+      },
+      "detail": {
+        "title": "Participant Invitation"
+      },
+      "email": "Email",
+      "state": "State",
+      "participantId": "Participant Id",
+      "study": "Study"
+    }
+  }
+}

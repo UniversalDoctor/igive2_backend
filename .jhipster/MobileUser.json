@@ -1,0 +1,73 @@
+{
+    "name": "MobileUser",
+    "fields": [
+        {
+            "fieldName": "gender",
+            "fieldType": "GenderType",
+            "fieldValues": "FEMALE,MALE,OTHER",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthdate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "diseases",
+            "fieldType": "Diseases",
+            "fieldValues": "HYPERTENSION,NONE",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "username",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "iGive2User",
+            "otherEntityRelationshipName": "mobileUser",
+            "relationshipName": "iGive2User",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "participant",
+            "otherEntityRelationshipName": "mobileUser",
+            "relationshipName": "studies"
+        }
+    ],
+    "changelogDate": "20191129174437",
+    "entityTableName": "mobile_user",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

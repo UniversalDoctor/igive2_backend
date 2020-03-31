@@ -1,0 +1,144 @@
+entity IGive2User{
+    newsletter Boolean required,
+    termsAccepted Boolean required,
+    country String required
+}
+
+entity MobileUser {
+    gender GenderType required,
+    birthdate LocalDate,
+    diseases Diseases required
+}
+
+enum GenderType {
+	FEMALE,
+    MALE,
+    OTHER
+}
+
+enum Diseases {
+	HYPERTENSION,
+    NONE
+}
+
+entity Researcher {
+	institution String required,
+    honorifics String required
+}
+
+entity ParticipantInvitation{
+	email String required,
+    state Boolean
+}
+
+enum State {
+	DRAFT,
+    PUBLISHED,
+    FINISHED
+}
+
+entity Study {
+	code String maxlength(100) required,
+    icon ImageBlob,
+    name String maxlength(100) required,
+    description String maxlength(1000),
+    moreInfo String,
+    contactEmail String,
+    startDate LocalDate,
+    endDate LocalDate,
+    state State required,
+    recruiting Boolean,
+    // A string with DataType keys separated with commas
+    requestedData String
+}
+
+entity ParticipantInstitution{
+    logo ImageBlob
+    // en un futuro podremos añadir string name i
+    //un enlace a la pagina web de la empresa para generar
+    //una base de datos de las empresas , asi cada vez que
+    //queramos poner una colaboracion de institucion  no subimos
+    //el logo solo lo seleccionamos, en caso de que no este
+    //se puede añadir,también se podra buscar
+}
+
+entity Participant{
+	userID Integer required,
+	entryDate Instant required,
+    anonymousId String required
+}
+
+entity Form{
+	name String required maxlength(100),
+    description String required maxlength(500),
+    state State
+}
+
+entity FormQuestion{
+	question String required,
+    isMandatary Boolean,
+    type QuestionType
+}
+
+entity FormAnswers{
+	savedDate LocalDate
+}
+
+entity Answer{
+	data String required
+}
+
+enum QuestionType {
+	FREEANSWER,
+	FREELONGANSWER,
+    SINGLECHECKBOX,
+    MULTIPLECHECKBOX,
+    DATEANSWER,
+    NUMERICANSWER
+}
+
+entity Data {
+	data DataType required,
+    notes String,
+    date Instant,
+    value String required
+}
+
+enum DataType {
+    HEIGHT,
+    WEIGHT,
+    STEPS,
+    ACTIVETIME,
+    SEATEDTIME,
+    SYSTOLIC,
+    DYASTOLIC,
+    BREATHINGPATTERN,
+    BREATHINGRAWDATA,
+    SLEEP,
+    HEARTHRATE
+}
+
+relationship OneToOne {
+    MobileUser to IGive2User,
+    Researcher to IGive2User,
+    FormAnswers to Form,
+    Participant to Study,
+    Answer to FormQuestion
+}
+relationship OneToMany{
+	MobileUser{healthData} to Data,
+    Form{questions} to FormQuestion,
+    Study{forms} to Form,
+    Study{institutions} to ParticipantInstitution,
+    Participant{participantData} to Data,
+    Study{invitations} to ParticipantInvitation,
+    Researcher{studies} to Study,
+    FormAnswers{responses} to Answer,
+    MobileUser{studies} to Participant,
+    Participant{forms} to FormAnswers
+}
+
+paginate * with pagination
+
+// Set service options to all except few
+service all with serviceImpl

@@ -1,0 +1,35 @@
+{
+  "igive2App": {
+    "study": {
+      "home": {
+        "title": "Studies",
+        "createLabel": "Create a new Study",
+        "createOrEditLabel": "Create or edit a Study",
+        "notFound": "No Studies found"
+      },
+      "created": "A new Study is created with identifier {{ param }}",
+      "updated": "A Study is updated with identifier {{ param }}",
+      "deleted": "A Study is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Study {{ id }}?"
+      },
+      "detail": {
+        "title": "Study"
+      },
+      "code": "Code",
+      "icon": "Icon",
+      "name": "Name",
+      "description": "Description",
+      "moreInfo": "More Info",
+      "contactEmail": "Contact Email",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "state": "State",
+      "recruiting": "Recruiting",
+      "requestedData": "Requested Data",
+      "dataJustification": "Data Justification",
+      "institutions": "Institutions",
+      "researcher": "Researcher"
+    }
+  }
+}

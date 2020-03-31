@@ -1,0 +1,61 @@
+{
+    "name": "IGive2User",
+    "fields": [
+        {
+            "fieldName": "newsletter",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "termsAccepted",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "mobileUser",
+            "otherEntityRelationshipName": "iGive2User",
+            "relationshipName": "mobileUser",
+            "ownerSide": false
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "researcher",
+            "otherEntityRelationshipName": "iGive2User",
+            "relationshipName": "researcher",
+            "ownerSide": false
+        },
+        {
+          "relationshipType": "one-to-one",
+          "otherEntityName": "user",
+          "otherEntityRelationshipName": "iGive2User",
+          "relationshipName": "users",
+          "ownerSide": false
+        }
+
+
+    ],
+    "changelogDate": "20191129174436",
+    "entityTableName": "i_give_2_user",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

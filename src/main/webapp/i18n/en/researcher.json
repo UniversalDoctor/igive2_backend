@@ -1,0 +1,26 @@
+{
+  "igive2App": {
+    "researcher": {
+      "home": {
+        "title": "Researchers",
+        "createLabel": "Create a new Researcher",
+        "createOrEditLabel": "Create or edit a Researcher",
+        "notFound": "No Researchers found"
+      },
+      "created": "A new Researcher is created with identifier {{ param }}",
+      "updated": "A Researcher is updated with identifier {{ param }}",
+      "deleted": "A Researcher is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Researcher {{ id }}?"
+      },
+      "detail": {
+        "title": "Researcher"
+      },
+      "institution": "Institution",
+      "honorifics": "Honorifics",
+      "userId": "User Id",
+      "iGive2User": "I Give 2 User",
+      "studies": "Studies"
+    }
+  }
+}

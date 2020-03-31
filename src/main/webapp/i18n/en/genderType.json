@@ -1,0 +1,10 @@
+{
+  "igive2App": {
+    "GenderType": {
+      "null": "",
+      "FEMALE": "FEMALE",
+      "MALE": "MALE",
+      "OTHER": "OTHER"
+    }
+  }
+}

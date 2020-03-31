@@ -1,0 +1,27 @@
+{
+  "igive2App": {
+    "formQuestion": {
+      "home": {
+        "title": "Form Questions",
+        "createLabel": "Create a new Form Question",
+        "createOrEditLabel": "Create or edit a Form Question",
+        "notFound": "No Form Questions found"
+      },
+      "created": "A new Form Question is created with identifier {{ param }}",
+      "updated": "A Form Question is updated with identifier {{ param }}",
+      "deleted": "A Form Question is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Form Question {{ id }}?"
+      },
+      "detail": {
+        "title": "Form Question"
+      },
+      "question": "Question",
+      "isMandatory": "Is Mandatory",
+      "type": "Type",
+      "options": "Options",
+      "answer": "Answer",
+      "form": "Form"
+    }
+  }
+}

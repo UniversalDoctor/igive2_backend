@@ -1,0 +1,54 @@
+{
+    "name": "Researcher",
+    "fields": [
+        {
+            "fieldName": "institution",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "honorifics",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "iGive2User",
+            "otherEntityRelationshipName": "researcher",
+            "relationshipName": "iGive2User",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "study",
+            "otherEntityRelationshipName": "researcher",
+            "relationshipName": "studies"
+        }
+    ],
+    "changelogDate": "20191120120504",
+    "entityTableName": "researcher",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

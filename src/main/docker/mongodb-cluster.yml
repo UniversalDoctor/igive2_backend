@@ -1,0 +1,16 @@
+version: '2'
+services:
+  igive2-mongodb:
+    image: mongo:4.0.13
+    ports:
+      - '27017:27017'
+    command: mongos --configdb igive2-mongodb-config
+  igive2-mongodb-node:
+    build:
+      context: .
+      dockerfile: mongodb/MongoDB.Dockerfile
+    command: mongod --replSet rs1 --noprealloc --smallfiles
+  igive2-mongodb-config:
+    image: mongo:4.0.13
+    container_name: igive2-mongodb-config
+    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

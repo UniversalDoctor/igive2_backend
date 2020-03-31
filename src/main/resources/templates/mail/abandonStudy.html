@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+<head>
+    <title th:text="#{email.abandon.study.title}">Invitation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+</head>
+<body>
+<p th:text="#{email.abandon.study.greeting(${user.firstName})}">
+    Hi ,
+</p>
+<p th:text="#{email.abandon.study.text(${study.name})}">
+    you are now no longer a part of the  . All your data related with the study has been deleted and no more data will be shared with the researcher study team.
+    Please do not hesitate to join other research studies or use iGive2 to track & improve your well-being.
+
+</p>
+<p th:text="#{email.abandon.study.text1}">
+    Your iGive2 Team
+</p>
+<i><p th:text="#{email.abandon.study.text2}">
+    The information contained in this e-mail - including attachments and personal data - is intended for the use of the addressee only and is confidential.
+    Access by any other person to this e-mail is not authorised. Any dissemination, distribution, copying or use of this communication without prior permission of the addressee is strictly prohibited.
+    You must take appropriate security and technical measures to protect this information (including personal data) and not retain the information longer than necessary.
+    If you received this e-mail in error, please inform the sender and subsequently delete the e-mail immediately.
+</p></i>
+<p>
+    <span th:text="#{email.abandon.study.text3}">Regards, </span>
+    <br/><br/>
+    <em th:text="#{email.signature}">JHipster.</em>
+</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "igive2App": {
+    "iGive2User": {
+      "home": {
+        "title": "I Give 2 Users",
+        "createLabel": "Create a new I Give 2 User",
+        "createOrEditLabel": "Create or edit a I Give 2 User",
+        "notFound": "No I Give 2 Users found"
+      },
+      "created": "A new I Give 2 User is created with identifier {{ param }}",
+      "updated": "A I Give 2 User is updated with identifier {{ param }}",
+      "deleted": "A I Give 2 User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete I Give 2 User {{ id }}?"
+      },
+      "detail": {
+        "title": "I Give 2 User"
+      },
+      "newsletter": "Newsletter",
+      "termsAccepted": "Terms Accepted",
+      "country": "Country",
+      "mobileUser": "Mobile User",
+      "researcher": "Researcher",
+      "user": "User"
+    }
+  }
+}

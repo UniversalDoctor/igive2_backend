@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+<head>
+    <title th:text="#{email.delete.acount.title}">Invitation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+</head>
+<body>
+<p th:text="#{email.delete.acount.greeting(${user.firstName})}">
+    Hi  ,
+</p>
+<p th:text="#{email.delete.acount.text}">
+    we are sad to see you go.</br>
+    Your iGive2 account including all your personal data has been deleted from our database. Thank you for your trust in iGive2 and we hope to see you again soon.
+</p>
+<p th:text="#{email.delete.acount.text1}">
+    Your iGive2 Team
+</p>
+<i><p th:text="#{email.delete.acount.text2}">
+    The information contained in this e-mail - including attachments and personal data - is intended for the use of the addressee only and is confidential.
+    Access by any other person to this e-mail is not authorised. Any dissemination, distribution, copying or use of this communication without prior permission of the addressee is strictly prohibited.
+    You must take appropriate security and technical measures to protect this information (including personal data) and not retain the information longer than necessary.
+    If you received this e-mail in error, please inform the sender and subsequently delete the e-mail immediately.
+</p></i>
+<p>
+    <span th:text="#{email.delete.acount.text3}">Regards, </span>
+    <br/><br/>
+    <em th:text="#{email.signature}">JHipster.</em>
+</p>
+</body>
+</html>

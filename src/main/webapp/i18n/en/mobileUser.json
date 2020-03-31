@@ -1,0 +1,30 @@
+{
+  "igive2App": {
+    "mobileUser": {
+      "home": {
+        "title": "Mobile Users",
+        "createLabel": "Create a new Mobile User",
+        "createOrEditLabel": "Create or edit a Mobile User",
+        "notFound": "No Mobile Users found"
+      },
+      "created": "A new Mobile User is created with identifier {{ param }}",
+      "updated": "A Mobile User is updated with identifier {{ param }}",
+      "deleted": "A Mobile User is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Mobile User {{ id }}?"
+      },
+      "detail": {
+        "title": "Mobile User"
+      },
+      "gender": "Gender",
+      "birthdate": "Birthdate",
+      "diseases": "Diseases",
+      "userId": "User Id",
+      "status": "Status",
+      "icon": "Icon",
+      "username": "Username",
+      "iGive2User": "I Give 2 User",
+      "studies": "Studies"
+    }
+  }
+}

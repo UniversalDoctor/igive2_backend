@@ -1,0 +1,31 @@
+# ===================================================================
+# Spring Boot configuration for the "heroku" profile.
+#
+# This configuration overrides the application.yml file.
+# ===================================================================
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+
+eureka:
+  instance:
+    hostname: igive-2.herokuapp.com
+    non-secure-port: 80
+    prefer-ip-address: false
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}?authMode=scram-sha1
+
+jhipster:
+  cors:
+    allowed-origins: '*'
+    allowed-methods: '*'
+    allowed-headers: '*'
+    exposed-headers: 'Authorization,Link,X-Total-Count'
+    allow-credentials: true
+    max-age: 1800

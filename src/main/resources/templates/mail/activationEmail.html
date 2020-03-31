@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+    <head>
+        <title th:text="#{email.activation.title}">JHipster activation</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="shortcut icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+    </head>
+    <body>
+        <p th:text="#{email.activation.greeting(${user.firstName})}">
+            Dear ,
+        <p>
+        <p th:text="#{email.activation.text}">
+            welcome to the iGive2 community!
+        </p>
+        <p th:text="#{email.activation.text1}">
+            There's just one more step. To validate your account please click the link below:
+        </p>
+        <p>
+            <a th:with="url=(@{|${baseUrl}/account/activate?key=${user.activationKey}|})" th:href="${url}"
+            th:text="${url}">Activation link</a>
+        </p>
+        <p th:text="#{email.activation.text2}">
+            Your iGive2 Team
+        </p>
+        <i><p th:text="#{email.activation.text3}">
+            The information contained in this e-mail - including attachments and personal data - is intended for the use of the addressee only and is confidential.
+            Access by any other person to this e-mail is not authorised. Any dissemination, distribution, copying or use of this communication without prior permission of the addressee is strictly prohibited.
+            You must take appropriate security and technical measures to protect this information (including personal data) and not retain the information longer than necessary.
+            If you received this e-mail in error, please inform the sender and subsequently delete the e-mail immediately.
+        </p></i>
+        <p>
+            <span th:text="#{email.activation.text4}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">JHipster.</em>
+        </p>
+    </body>
+</html>

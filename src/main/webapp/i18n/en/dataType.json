@@ -1,0 +1,17 @@
+{
+  "igive2App": {
+    "DataType": {
+      "null": "",
+      "HEIGHT": "HEIGHT",
+      "WEIGHT": "WEIGHT",
+      "STEPS": "STEPS",
+      "ACTIVETIME": "ACTIVETIME",
+      "SEATEDTIME": "SEATEDTIME",
+      "SYSTOLIC": "SYSTOLIC",
+      "DYASTOLIC": "DYASTOLIC",
+      "BREATHSPERMINUTE": "BREATHSPERMINUTE",
+      "BREATHINGRAWDATA": "BREATHINGRAWDATA",
+      "SLEEP": "SLEEP"
+    }
+  }
+}

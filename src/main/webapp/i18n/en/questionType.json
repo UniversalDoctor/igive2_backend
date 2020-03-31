@@ -1,0 +1,13 @@
+{
+  "igive2App": {
+    "QuestionType": {
+      "null": "",
+      "FREEANSWER": "FREEANSWER",
+      "FREELONGANSWER": "FREELONGANSWER",
+      "SINGLECHECKBOX": "SINGLECHECKBOX",
+      "MULTIPLECHECKBOX": "MULTIPLECHECKBOX",
+      "DATEANSWER": "DATEANSWER",
+      "NUMERICANSWER": "NUMERICANSWER"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "ParticipantInvitation",
+    "fields": [
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "participantId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "study",
+            "otherEntityRelationshipName": "invitations",
+            "relationshipName": "study",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174439",
+    "entityTableName": "participant_invitation",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

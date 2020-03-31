@@ -1,0 +1,99 @@
+{
+    "name": "Study",
+    "fields": [
+        {
+            "fieldName": "code",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 1000
+        },
+        {
+            "fieldName": "moreInfo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contactEmail",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "state",
+            "fieldType": "State",
+            "fieldValues": "DRAFT,PUBLISHED,FINISHED",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "recruiting",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "requestedData",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dataJustification",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "participantInstitution",
+            "otherEntityRelationshipName": "study",
+            "relationshipName": "institutions"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "researcher",
+            "otherEntityRelationshipName": "studies",
+            "relationshipName": "researcher",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174440",
+    "entityTableName": "study",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": false,
+    "databaseType": "mongodb"
+}

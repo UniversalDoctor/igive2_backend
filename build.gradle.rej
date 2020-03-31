@@ -1,0 +1,10 @@
+diff a/build.gradle b/build.gradle	(rejected hunks)
+@@ -31,7 +31,7 @@
+ }
+ 
+ group = "com.universaldoctor.igive2"
+-version = "0.0.11"
++version = "0.0.12"
+ 
+ description = ""
+ 

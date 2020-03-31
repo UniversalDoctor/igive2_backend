@@ -1,0 +1,39 @@
+{
+    "name": "Answer",
+    "fields": [
+        {
+            "fieldName": "data",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "formQuestion",
+            "otherEntityRelationshipName": "answer",
+            "relationshipName": "formQuestion",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "formAnswers",
+            "otherEntityRelationshipName": "responses",
+            "relationshipName": "formAnswers",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191129174446",
+    "entityTableName": "answer",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
